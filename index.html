@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Lexend+Deca:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section class="cars">
+    <div class="cars__container">
+      <div class="cars__body">
+        <div class="cars__column">
+          <div class="cars__item item-car">
+            <div class="item-car__icon"><img src="images/icon-sedans.svg" alt=""></div>
+            <div class="item-car__title">Sedans</div>
+            <div class="item-car__desc">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+              or on your next road trip.</div>
+            <div class="item-car__btn btn"><a href="">Learn more</a></div>
+          </div>
+        </div>
+        <div class="cars__column">
+          <div class="cars__item item-car">
+            <div class="item-car__icon"><img src="images/icon-suvs.svg" alt=""></div>
+            <div class="item-car__title">SUVs</div>
+            <div class="item-car__desc">Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.</div>
+            <div class="item-car__btn btn"><a href="">Learn more</a></div>
+          </div>
+        </div>
+        <div class="cars__column">
+          <div class="cars__item item-car">
+            <div class="item-car__icon"><img src="images/icon-luxury.svg" alt=""></div>
+            <div class="item-car__title">Luxury</div>
+            <div class="item-car__desc">Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</div>
+            <div class="item-car__btn btn"><a href="">Learn more</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+</body>
+</html>
+
+<style>
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Lexend Deca";
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  background-color: #fff;
+  color: #fff;
+  padding: 10px;
+
+}
+
+.cars { }
+.cars__container { 
+  max-width: 800px;
+  margin: 0 auto;
+}
+.cars__body { 
+  display: flex;
+}
+.cars__column { 
+  flex: 1 1 33.333%;
+}
+
+.cars__body:nth-child(1) {
+  background-color: hsl(31, 77%, 52%);
+}
+.cars__column:nth-child(2) {
+  background-color: hsl(184, 100%, 22%);
+}
+.cars__column:nth-child(3) {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.cars__item { 
+  padding: 30px 30px 30px 40px;
+}
+.item-car { 
+  display: flex;
+  flex-direction: column;
+}
+.item-car__icon { 
+  margin-bottom: 30px;
+}
+.item-car__title { 
+  font-family: "Big Shoulders Display";
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.item-car__desc { 
+  font-size: 14px;
+  line-height: 150%;
+  color: hsla(0, 0%, 100%, 0.75);
+  max-width: 70%;
+  margin-bottom: 50px;
+}
+.btn a{
+  display: block;
+  align-self: flex-end;
+  padding: 15px 25px;
+  border-radius: 35px;
+  background-color: #fff;
+  max-width: 70%;
+  text-align: center;
+  cursor: pointer;
+  margin-top: auto;
+
+}
+.item-car__btn { 
+  font-size: 14px;  
+}
+
+@media (max-width: 425px) {
+  .cars__body {
+    flex-direction: column;
+  }
+  .item-car__desc {
+    max-width: 90%;
+    margin-bottom: 25px;
+  }
+  .btn a {
+    padding: 15px 15px;
+    max-width: 50%;
+  }
+}
+</style>
